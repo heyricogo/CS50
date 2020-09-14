@@ -1,0 +1,22 @@
+body {
+    text-align:center;
+}
+
+img {
+    max-width:500px;
+    max-height:350px;
+}
+
+h1 {
+    font-size:100px;
+}
+
+.form-group {
+    margin:20px;
+}
+#imageSelected {
+    max-width:600px;
+    max-height:450px;
+    text-align:center;
+}
+

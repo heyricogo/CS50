@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="index.html">My Webpage</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="cohen.html">Leonard Cohen tribute</a></li>
+              <li><a href="gandhi.html">Mahatma Gandhi tribute</a></li>
+              <li><a href="einstein.html">Albert Einstein tribute</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="form-group">
+            <h1>
+                Hello, you ! 
+            </h1>
+            <p>Welcome in my Website</p>
+            <img id="image" src="https://www.osho.com/sites/default/files/styles/osho-content-page-inline/public/126.jpg?itok=5mc3KHld" class="img-thumbnail" alt="noOne">
+        </div>
+        <div class="form-group">
+            <form>
+                <div class="form-group">
+                    <label for="imageSelected">Select an image:</label>
+                    <select class="mdb-select md-form" id="imageSelected">
+                        <option selected value="noOne">no one</option>
+                        <option value="cat">a cat</option>
+                        <option value="dog">a dog</option>
+                        <option value="rabbit">a rabbit</option>
+                    </select>
+            </form>
+        </div>
+        <script>
+            let image = document.querySelector('#image');
+            document.querySelector('select').onchange = function() {
+                if (this.value == "noOne"){
+                    image.src="https://www.osho.com/sites/default/files/styles/osho-content-page-inline/public/126.jpg?itok=5mc3KHld";    
+                }
+                if (this.value == "cat"){
+                    image.src="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg";    
+                }
+                if (this.value == "dog"){
+                    image.src="https://static01.nyt.com/images/2018/06/26/business/25ugileistdog-sub/merlin_140144286_193276f3-89e9-44a8-a828-51ec9ff5bc8e-jumbo.jpg?quality=90&auto=webp";    
+                }
+                if (this.value == "rabbit"){
+                    image.src="https://pixel.nymag.com/imgs/daily/vulture/2018/02/09/09-peter-rabbit.w700.h700.jpg";    
+                }
+            }
+        </script>
+    </body>
+</html>
